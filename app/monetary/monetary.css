@@ -1,0 +1,17 @@
+.monetary {
+    padding: 50px 0px;
+}
+.monetary .m-btn {
+    cursor: pointer;
+}
+.monetary > .panel-default  {
+  border-color: #337ab7;
+}
+.monetary > .panel-default > .panel-heading {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #337ab7;
+}
+.monetary table thead {
+    color: #337ab7;
+}

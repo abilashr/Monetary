@@ -1,0 +1,31 @@
+
+<section class="col-sm-12 col-md-5 monetary" ng-controller="monetaryCtrl">
+    <div class="panel panel-default">
+        <div class="panel-heading">Coinage</div>
+        <div class="panel-body">
+          Enter monetary value for coin conversion.
+          <div class="input-group">
+            <input type="text" class="form-control" ng-model="amount" placeholder="Ex: 123p = 1 x £1, 1 x 20p, 1 x 2p, 1 x 1p" aria-describedby="basic-addon2" required>
+            <span class="input-group-addon m-btn" ng-click="convert()" id="basic-addon2">convert</span>
+          </div>
+        <div>Converting {{amount}} pennies into coins {{amounts}}</div>
+          <table class="table">
+            <thead>
+              <th>Coin</th>
+              <th >Amount</th>
+            </thead>
+            <tbody>
+              <tr ng-repeat="c in coinage | orderBy:'coin'">
+                <td>{{ c.coin }}</td>
+                <td >{{ c.count }}</td>
+              </tr>
+              <tr ng-if="isValid == false">
+                <td colspan="2"><div class="alert alert-danger" role="alert">Enter a valid input!</div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+
+
+</section>
